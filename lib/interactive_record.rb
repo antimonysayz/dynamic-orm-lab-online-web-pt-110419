@@ -48,5 +48,8 @@ def values_for_insert
   values.join(", ")
 end
 
+def column_names_for_insert
+end
+
 
 end
