@@ -18,6 +18,7 @@ class InteractiveRecord
       |row|
       column_names << row["name"]
     }
+    column_names.compact
 end
 
 
