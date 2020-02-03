@@ -28,6 +28,10 @@ def initialize(options = {})
   }
 end
 
+def save
+  sql = "INSERT INTO #{table_name_for_insert} (#{column_names_for_insert}) VALUES (#{values_for_insert})"
+  DB[:conn].execute(sql)
+  @id = DB[:conn].execute("SELECT last_insert_rowid() FROM #{table_name_for_insert}")[0][0]
 def table_name_for_insert
   names = []
   self.class.table_name
