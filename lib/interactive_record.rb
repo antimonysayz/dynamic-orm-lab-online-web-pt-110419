@@ -24,7 +24,7 @@ end
 def initialize(options = {})
   options.each{
     |property, value|
-    self.send('#{property}=', value)
+    self.send("#{property}=", value)
   }
 end
 
