@@ -65,7 +65,7 @@ def self.find_by(hash)
   sql = <<-SQL
   SELECT * FROM #{self.table_name} #{column_name} = ?
   SQL
-  DB[:conn].execute(sql, )
+  DB[:conn].execute(sql, value_name)
 end
 
 
