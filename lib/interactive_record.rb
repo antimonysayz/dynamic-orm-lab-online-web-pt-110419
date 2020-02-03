@@ -28,5 +28,10 @@ def initialize(options = {})
   }
 end
 
+def table_name_for_insert
+  names = []
+  self.class.table_name
+end
+
 
 end
